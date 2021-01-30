@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { productsInstance } from '../../utils/apis';
 import { apiKeys } from '../../utils/keys';
+import Container from './container/Container';
+import LoadingContainer from './container/LoadingContainer'
 
 function TopSales() {
     const [loading, setLoading] = useState(false);
     const [topSales, setTopSales] = useState([]);
 
     useEffect(() => {
-        async function fetchTopRated() {
+        async function fetchTopSales() {
             setLoading(true)
             const response = await productsInstance.get(`topsales?apikey=${apiKeys}`)
             const data = await response.data
@@ -17,7 +19,7 @@ function TopSales() {
             setLoading(false)
         }
 
-        fetchTopRated()
+        fetchTopSales()
         
         return () => {
 
@@ -25,12 +27,20 @@ function TopSales() {
     },[]);
     
     return (
-        <div className="w-screen bg-green-800 mt-8">
+        <div className="w-full bg-green-400 mt-8 py-4">
             <div className="w-11/12 mx-auto md:w-10/12 2xl:w-8/12 text-white">
-                <h1 className="font-bold text-2xl">Top sales product</h1>
-                {
-                    loading ? <p>Loading...</p> : console.log(topSales)
-                }
+                <h1 className="font-bold text-2xl">Top sales products</h1>
+                <div className="my-4">
+                    {
+                        loading ? <LoadingContainer />
+                            :
+                            <Container 
+                                loading={loading}
+                                data={topSales}
+                                type="top sales"
+                            />
+                    }
+                </div>
             </div>
         </div>
     )

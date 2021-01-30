@@ -1,20 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import LazyLoad from 'react-lazyload'
 
-function Product() {
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import ReactStars from "react-rating-stars-component";
+
+function Product({data, type}) {
     return (
-        <div class="rounded overflow-hidden shadow-lg">
-            <img class="w-full" src="/mountain.jpg" alt="Mountain" />
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Mountain</div>
-                <p class="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                </p>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-            </div>
+        <div className="h-full">
+            <Link to="/products">
+                <div className={"c-card rounded" + (type === "top rated" ? "shadow-md hover:shadow-2xl" : "shadow-md hover:shadow-lg bg-white")}>
+                    <LazyLoad height={150}>
+                        <img className="w-full" src={data.product_image_sm} alt={data.product_image_sm} />
+                    </LazyLoad>
+
+                    <div className="p-3 md:p-4 text-black">
+                        <span className="py-1 px-3 bg-green-400 rounded-full text-center text-green-900 font-bold uppercase text-xs w-auto">{type}</span>
+                        <div className="font-bold text-md my-1">{data.product_name}</div>
+                        <div><span className="text-xs font-semibold">&#8369;</span><span className="text-base font-bold">{data.product_price}</span></div>
+                    </div>
+                    <div className="p-3 md:p-4 border-t-2 text-xs text-gray-700">
+                        <ReactStars 
+                            value={data.product_ratings}
+                            edit={false}
+                            filledIcon={<AiFillStar color="#FBBF24"/>}
+                            emptyIcon={<AiOutlineStar color="#9CA3A"/>}
+                        /><span>{data.product_sales} sales</span>
+                    </div>
+                </div>
+            </Link>
         </div>
     )
 }

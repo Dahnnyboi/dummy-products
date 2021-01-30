@@ -4,10 +4,11 @@ This branch is dedicated for development! this where the changes are made and ex
 
 ## Things to do
 1. Front Page
-    * Navbar
-    * Showcase
-    * Top Rated products
-    * Top Sales products
+    * ~~Navbar~~
+    * ~~Showcase~~
+    * ~~Top Rated products~~
+    * ~~Top Sales products~~
+    * ~~Footer~~
 2. Products Page
     1. Individual Products Component
         * Display data contents
@@ -15,3 +16,7 @@ This branch is dedicated for development! this where the changes are made and ex
     * Fetching the datas
     * displaying the preview datas
     * Pagination
+3. Optimization
+    * Lazy loading
+    * Code splitting
+4. Animations

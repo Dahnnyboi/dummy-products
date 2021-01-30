@@ -5,17 +5,15 @@ import {
   Route,
 } from "react-router-dom";
 import Navbar from './components/global/Navbar';
-import Shell from './components/global/Shell';
 
 import Home from './pages/Home';
 import Products from './pages/Products'
+import Footer from './components/global/Footer';
 
 function ProductsRoute({ children, ...rest}) {
   return(
     <Route {...rest}>
-      <Shell>
-        { children }
-      </Shell>
+      { children }
     </Route>
   )
 }
@@ -33,6 +31,8 @@ function App() {
           <Products />
         </ProductsRoute>
       </Switch>
+
+      <Footer />
     </Router>
   );
 }

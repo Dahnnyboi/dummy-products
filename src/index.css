@@ -9,3 +9,22 @@
         url: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
     }
 }
+
+.c-card {}
+
+.c-card img{
+    transition: transform .3s ease-in-out; 
+}
+
+.c-card img:hover{
+    transform: scale(1.15);
+}
+
+.react-icons{
+    vertical-align: middle;
+}
+
+.react-icons-inline{
+    display: inline;
+    margin-right: 4px;
+}
