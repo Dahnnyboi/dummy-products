@@ -14,8 +14,11 @@
     "postcss": "^7.0.35",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-lazyload": "^3.1.0",
     "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "swiper": "^6.4.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "web-vitals": "^0.2.4"
   },
