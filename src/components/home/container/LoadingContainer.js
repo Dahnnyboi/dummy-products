@@ -28,9 +28,9 @@ function LoadingContainer() {
             breakpoints={breakPoint}
         >
             {
-                elements.map(e => {
+                elements.map((e, i) => {
                     return(
-                        <SwiperSlide>
+                        <SwiperSlide key={i}>
                             <LoadingProduct />
                         </SwiperSlide>
                     )

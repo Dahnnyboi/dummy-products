@@ -7,7 +7,7 @@ import 'swiper/swiper-bundle.min.css'
 
 SwiperCore.use([Navigation, Autoplay]);
 
-function Container({ loading, data, type }) {
+function Container({ data, type }) {
     const breakPoint = {
         320: {
             slidesPerView: 2,
@@ -27,9 +27,13 @@ function Container({ loading, data, type }) {
         }
     }
 
+    const autoplay = {
+        delay: type === "top rated" ? 5000 : 3000
+    }
+
     return (
         <Swiper
-            autoplay={true}
+            autoplay={autoplay}
             navigation
             breakpoints={breakPoint}
         >

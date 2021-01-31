@@ -1,9 +1,15 @@
 import React from 'react'
+import Shell from '../components/global/Shell'
+import ProductsSection from '../components/products/ProductsSection'
+import RandomContainer from '../components/products/RandomContainer'
 
 function Products() {
     return (
         <div>
-            <h1>Products</h1>
+            <Shell>
+                <ProductsSection />
+                <RandomContainer />
+            </Shell>
         </div>
     )
 }

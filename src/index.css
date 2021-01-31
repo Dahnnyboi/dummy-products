@@ -28,3 +28,35 @@
     display: inline;
     margin-right: 4px;
 }
+
+.next, .prev{
+    color: blue;
+    width: 10px;
+    height: 10px;
+}
+
+/* 1 product */
+.width-container{
+    width: 100%;
+}
+
+/* 2 product */
+@media(min-width: 768px){
+    .width-container{
+        width: 46%;
+    }
+}
+
+/* 3 product */
+@media(min-width: 1280px){
+    .width-container{
+        width: 30%;
+    }
+}
+
+/* 6 product */
+@media(min-width: 1560px){
+    .width-container{
+        width: 14%;
+    }
+}

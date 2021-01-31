@@ -4,7 +4,7 @@ import logo from '../../assets/images/dummy logo.svg';
 
 function Navbar() {
     return (
-        <nav className="z-10 w-screen bg-green-300 text-white py-2 shadow-md fixed">
+        <nav className="z-10 w-screen bg-green-300 text-white py-4 shadow-md fixed">
             <div className="w-11/12 mx-auto md:w-10/12 2xl:w-8/12 flex flex-row">
                 <Link to="/" className="font-custom text-green-700 font-bold text-md md:text-lg flex-grow">
                     <img src={logo} alt="logo" className="w-8 inline-block mr-4"/>
