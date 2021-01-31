@@ -28,15 +28,14 @@ function TopRated() {
 
     return (
         <div className="w-full bg-white-400 mt-4 py-4">
-            <div className="w-11/12 mx-auto md:w-10/12 2xl:w-8/12 text-green-800">
-                <h1 className="font-bold text-2xl">Top rated products</h1>
+            <div className="w-11/12 md:w-10/12 2xl:w-8/12 text-green-800 mx-auto">
+                <h1 className="text-2xl font-bold">Top rated products</h1>
                 <div className="my-4">
                     {
                         loading ? <LoadingContainer />
                             :
                             <Container 
-                                loading={loading}
-                                data={topRated}
+                                datas={topRated}
                                 type="top rated"
                             />
                     }

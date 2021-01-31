@@ -6,7 +6,7 @@ import ReactStars from "react-rating-stars-component";
 
 function RandomProduct({ data }) {
     return (
-        <div className="h-24 grid grid-cols-3 grid-rows-2 gap-2 w-full m-4 2xl:m-6">
+        <div className="w-full h-24 grid grid-cols-3 grid-rows-2 gap-2 m-4 2xl:m-6">
             <div className="col-span-1 row-span-2">
                 <LazyLoad>
                     <img src={data.product_image_sm} alt={data.product_image_sm} />

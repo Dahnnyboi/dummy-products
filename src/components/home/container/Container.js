@@ -7,7 +7,7 @@ import 'swiper/swiper-bundle.min.css'
 
 SwiperCore.use([Navigation, Autoplay]);
 
-function Container({ data, type }) {
+function Container({ datas, type }) {
     const breakPoint = {
         320: {
             slidesPerView: 2,
@@ -38,10 +38,10 @@ function Container({ data, type }) {
             breakpoints={breakPoint}
         >
             {
-                data.map((d, i) => {
+                datas.map((data, index) => {
                     return (
-                        <SwiperSlide key={i}>
-                            <Product data={d} type={type} />
+                        <SwiperSlide key={index}>
+                            <Product data={data} type={type} />
                         </SwiperSlide>
                     )
                 })

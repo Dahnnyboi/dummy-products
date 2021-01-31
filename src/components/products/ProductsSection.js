@@ -38,7 +38,7 @@ function ProductSection() {
     }
 
     return (
-        <div className="w-full m-4 lg:w-2/3">
+        <div className="w-full lg:w-2/3 m-4">
             <ReactPaginate 
                 previousLabel={'prev'}
                 nextLabel={'next'}
@@ -57,7 +57,7 @@ function ProductSection() {
                 loading ?
                     <LoadingContainer />
                     :
-                    <ProductsContainer data={products}/>
+                    <ProductsContainer datas={products}/>
             }
             <ReactPaginate 
                 previousLabel={'prev'}

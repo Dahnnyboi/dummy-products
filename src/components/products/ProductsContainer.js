@@ -1,12 +1,12 @@
 import React from 'react'
 import Product from './Product'
 
-function ProductsContainer({data}) {
+function ProductsContainer({datas}) {
     return (
         <div className="w-full flex flex-col md:flex-row md:flex-wrap">
             {
-                data.map((d, index) => {
-                    return <Product key={index} data={d}/>
+                datas.map((data, index) => {
+                    return <Product key={index} data={data}/>
                 })
             }        
         </div>

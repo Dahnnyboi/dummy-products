@@ -9,17 +9,17 @@ function Product({data, type}) {
     return (
         <div className="h-full">
             <Link to="/products">
-                <div className={"c-card rounded" + (type === "top rated" ? "shadow-md hover:shadow-2xl" : "shadow-md hover:shadow-lg bg-white")}>
+                <div className={"c-card rounded bg-white " + (type === "top rated" ? "shadow-md hover:shadow-2xl" : "shadow-md hover:shadow-lg")}>
                     <LazyLoad height={150}>
                         <img className="w-full" src={data.product_image_sm} alt={data.product_image_sm} />
                     </LazyLoad>
 
-                    <div className="p-3 md:p-4 text-black h-32">
-                        <span className="py-1 px-2 bg-green-400 rounded-full text-center text-green-900 font-bold uppercase text-xs w-auto">{type}</span>
-                        <div className="font-bold text-md my-1">{data.product_name}</div>
+                    <div className="h-32 text-black p-3 md:p-4">
+                        <span className="w-auto py-1 px-2 bg-green-400 text-green-900 text-center uppercase text-xs font-bold rounded-full">{type}</span>
+                        <div className="text-md font-bold my-1">{data.product_name}</div>
                         <div><span className="text-xs font-semibold">&#8369;</span><span className="text-base font-bold">{data.product_price}</span></div>
                     </div>
-                    <div className="p-3 md:p-4 border-t-2 text-xs text-gray-700">
+                    <div className="text-xs text-gray-700 p-3 md:p-4 border-t-2">
                         <ReactStars 
                             value={data.product_ratings}
                             edit={false}

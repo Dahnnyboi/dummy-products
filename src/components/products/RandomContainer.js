@@ -27,8 +27,8 @@ function RandomContainer() {
 
     return (
         <div className="hidden lg:block w-0 lg:w-1/3 m-4">
-            <div className=" sticky top-24">
-                <h1 className="text-md font-medium text-green-800">Random products</h1>
+            <div className="sticky top-24">
+                <h1 className="text-md text-green-800 font-medium">Random products</h1>
 
                 {
                     loading ?

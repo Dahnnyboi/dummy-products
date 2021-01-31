@@ -28,15 +28,14 @@ function TopSales() {
     
     return (
         <div className="w-full bg-green-400 mt-8 py-4">
-            <div className="w-11/12 mx-auto md:w-10/12 2xl:w-8/12 text-white">
-                <h1 className="font-bold text-2xl">Top sales products</h1>
+            <div className="w-11/12 md:w-10/12 2xl:w-8/12 text-white mx-auto">
+                <h1 className="text-2xl font-bold ">Top sales products</h1>
                 <div className="my-4">
                     {
                         loading ? <LoadingContainer />
                             :
                             <Container 
-                                loading={loading}
-                                data={topSales}
+                                datas={topSales}
                                 type="top sales"
                             />
                     }

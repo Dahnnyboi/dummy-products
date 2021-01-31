@@ -7,8 +7,8 @@ function LoadingRandomContainer() {
     return (
         <div>
             {
-                elements.map((elem, index) => {
-                    return <LoadingRandom key={index}/>
+                elements.map((e, i) => {
+                    return <LoadingRandom key={i}/>
                 })
             }
         </div>
