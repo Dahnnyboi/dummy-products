@@ -1,77 +1,28 @@
-import React, { useEffect, useState } from 'react'
-import ReactPaginate from 'react-paginate'
+import React, { useState } from 'react'
 
-import { productsInstance } from '../../utils/apis';
-import { apiKeys } from '../../utils/keys';
-
-import ProductsContainer from './ProductsContainer'
-import LoadingContainer from './loading/LoadingContainer'
+import FilteredProducts from './FilteredProducts'
+import UnfilteredProducts from './UnfilteredProducts';
 
 function ProductSection() {
     const perPage = 20;
-    const [loading,setLoading] = useState(false)
-    const [products, setProducts] = useState([])
-    const [pageCount, setPageCount] = useState(0)
-    const [offset, setOffset] = useState(1)
+    const [filter, setFilter] = useState(false)
+    const [min, setMin] = useState(0)
+    const [max, setMax] = useState(500)
 
-    useEffect(() => {
-        async function getProducts(os){
-            setLoading(true)
-            const response = await productsInstance.get(`?apikey=${apiKeys}&limit=${perPage}&page=${os}`)
-            const data = response.data
-
-            setProducts(data.data)
-            setLoading(false)
-            setPageCount(data.lastPage)
-        }
-
-        getProducts(offset)
-        
-        return () => {
-
-        }
-    }, [offset])
-
-    const handleChangePage = (data) => {
-        let selected = data.selected + 1
-        setOffset(selected)
+    const updateFilter = (value, min, max) => {
+        setMin(min)
+        setMax(max)
+        setFilter(value)
     }
 
     return (
-        <div className="w-full lg:w-2/3 m-4">
-            <ReactPaginate 
-                previousLabel={'prev'}
-                nextLabel={'next'}
-                breakLabel={'...'}
-                breakClassName={'break-me'}
-                pageCount={pageCount}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-                onPageChange={handleChangePage}
-                containerClassName={'pagination'}
-                subContainerClassName={'pages pagination'}
-                activeClassName={'active'}
-            />
-            
+        <div className="w-full lg:w-2/3 mt-4">
             {
-                loading ?
-                    <LoadingContainer />
+                filter ?
+                    <FilteredProducts perPage={perPage} minFilter={min} maxFilter={max} setFilter={updateFilter}/>
                     :
-                    <ProductsContainer datas={products}/>
+                    <UnfilteredProducts perPage={perPage} setFilter={updateFilter}/>
             }
-            <ReactPaginate 
-                previousLabel={'prev'}
-                nextLabel={'next'}
-                breakLabel={'...'}
-                breakClassName={'break-me'}
-                pageCount={pageCount}
-                marginPagesDisplayed={2}
-                pageRangeDisplayed={5}
-                onPageChange={handleChangePage}
-                containerClassName={'pagination'}
-                subContainerClassName={'pages pagination'}
-                activeClassName={'active'}
-            />
         </div>
     )
 }

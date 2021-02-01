@@ -10,11 +10,11 @@ SwiperCore.use([Navigation, Autoplay]);
 function Container({ datas, type }) {
     const breakPoint = {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 6,
         },
         640: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 12,
         },
         1280: {

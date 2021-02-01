@@ -8,9 +8,9 @@ function LoadingRandom() {
             </div>
             <div className="col-span-2">
                 <div className="w-full h-4 bg-green-500 my-1 rounded "></div>
-                <div className="w-full h-4 bg-green-500 my-1 rounded "></div>
-                <div className="w-full h-4 bg-green-500 my-1 rounded "></div>
-                <div className="w-full h-4 bg-green-500 my-1 rounded "></div>
+                <div className="w-1/4 h-4 bg-green-500 my-1 rounded "></div>
+                <div className="w-1/2 h-4 bg-green-500 my-1 rounded "></div>
+                <div className="w-1/2 h-4 bg-green-500 my-1 rounded "></div>
             </div>
         </div>
     )

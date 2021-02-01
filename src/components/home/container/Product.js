@@ -7,14 +7,14 @@ import ReactStars from "react-rating-stars-component";
 
 function Product({data, type}) {
     return (
-        <div className="h-full">
+        <div className="z-0 h-full">
             <Link to="/products">
                 <div className={"c-card rounded bg-white " + (type === "top rated" ? "shadow-md hover:shadow-2xl" : "shadow-md hover:shadow-lg")}>
                     <LazyLoad height={150}>
-                        <img className="w-full" src={data.product_image_sm} alt={data.product_image_sm} />
+                        <img className="w-full" src={data.product_image_md} alt={data.product_image_md} />
                     </LazyLoad>
 
-                    <div className="h-32 text-black p-3 md:p-4">
+                    <div className="h-40 md:h-36 text-black p-3 md:p-4">
                         <span className="w-auto py-1 px-2 bg-green-400 text-green-900 text-center uppercase text-xs font-bold rounded-full">{type}</span>
                         <div className="text-md font-bold my-1">{data.product_name}</div>
                         <div><span className="text-xs font-semibold">&#8369;</span><span className="text-base font-bold">{data.product_price}</span></div>

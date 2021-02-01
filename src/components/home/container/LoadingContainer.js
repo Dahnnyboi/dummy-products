@@ -6,11 +6,11 @@ function LoadingContainer() {
     const elements = [1, 2, 3, 4, 5, 6]
     const breakPoint = {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 6,
         },
         640: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 12,
         },
         1280: {
