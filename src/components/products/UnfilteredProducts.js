@@ -19,8 +19,12 @@ function UnfilteredProducts({ perPage, setFilter }) {
     const [pageCount, setPageCount] = useState(0)
     const [offset, setOffset] = useState(1)
 
-    const [min, setMin] = useState(0)
-    const [max, setMax] = useState(500) 
+    const [minPrice, setMinPrice] = useState(0)
+    const [maxPrice, setMaxPrice] = useState(500)
+    const [minSales, setMinSales] = useState(0)
+    const [maxSales, setMaxSales] = useState(500)
+    const [minRatings, setMinRatings] = useState(0)
+    const [maxRatings, setMaxRatings] = useState(5)
 
     useEffect(() => {
         async function getProducts(os){
@@ -44,9 +48,9 @@ function UnfilteredProducts({ perPage, setFilter }) {
         setOpen(value)
     }
 
-    const submitFilter = (min, max) => {
+    const submitFilter = (minPrice, maxPrice, minSales, maxSales, minRatings, maxRatings) => {
         setOpen(false)
-        setFilter(true, min, max)
+        setFilter(true, minPrice, maxPrice, minSales, maxSales, minRatings, maxRatings)
     }
 
     const handleChangePage = (data) => {
@@ -74,12 +78,24 @@ function UnfilteredProducts({ perPage, setFilter }) {
                 </div>
                 
                 <label className="block text-xs">Minimum price</label>
-                <input className="py-1 px-2" type="number" value={min} onChange={(e) => { setMin(e.target.value) }} name="min" min="0" max="1000" />
+                <input className="py-1 px-2" type="number" value={minPrice} onChange={(e) => { setMinPrice(e.target.value) }} name="min" min="0" max="1000" />
 
                 <label className="block text-xs">Maximum price</label>
-                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMax(e.target.value) }}  value={max} name="max" min="500" max="1500" />
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxPrice(e.target.value) }}  value={maxPrice} name="max" min="500" max="1500" />
+
+                <label className="block text-xs">Minimum sales</label>
+                <input className="py-1 px-2" type="number" value={minSales} onChange={(e) => { setMinSales(e.target.value) }} name="min" min="0" max="1000" />
                 
-                <button className="block bg-green-300 text-green-800 font-medium mt-2 py-1 px-3 rounded" onClick={() => submitFilter(min, max)}>Submit</button>
+                <label className="block text-xs">Maximum sales</label>
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxSales(e.target.value) }}  value={maxSales} name="max" min="500" max="1500" />
+
+                <label className="block text-xs">Minimum ratings</label>
+                <input className="py-1 px-2" type="number" value={minRatings} onChange={(e) => { setMinRatings(e.target.value) }} name="min" min="0" max="4" />
+                
+                <label className="block text-xs">Maximum ratings</label>
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxRatings(e.target.value) }}  value={maxRatings} name="max" min="0" max="5" />
+                
+                <button className="block bg-green-300 text-green-800 font-medium mt-2 py-1 px-3 rounded" onClick={() => submitFilter(minPrice, maxPrice, minSales, maxSales, minRatings, maxRatings)}>Submit</button>
             </Modal>
 
 

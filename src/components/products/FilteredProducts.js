@@ -10,22 +10,28 @@ import { apiKeys } from '../../utils/keys';
 import LoadingContainer from './loading/LoadingContainer'
 import ProductsContainer from './ProductsContainer'
 
-function FilteredProducts({ perPage, minFilter, maxFilter, setFilter}) {
+function FilteredProducts({ perPage, _minPrice, _maxPrice, _minSales, _maxSales, _minRatings, _maxRatings, setFilter}) {
     const [open, setOpen] = useState(false)
     const [loading,setLoading] = useState(false)
     const [products, setProducts] = useState([])
     const [pageCount, setPageCount] = useState(0)
     const [offset, setOffset] = useState(1)
 
-    const [min, setMin] = useState(0)
-    const [max, setMax] = useState(500)
+    const [minPrice, setMinPrice] = useState(0)
+    const [maxPrice, setMaxPrice] = useState(500)
+    const [minSales, setMinSales] = useState(0)
+    const [maxSales, setMaxSales] = useState(500)
+    const [minRatings, setMinRatings] = useState(0)
+    const [maxRatings, setMaxRatings] = useState(5)
 
     useEffect(() => {
         async function getProducts(os){
             setLoading(true)
-            const response = await productsInstance.get(`?apikey=${apiKeys}&limit=${perPage}&page=${os}&price=gt_${minFilter}^lt_${maxFilter}`)
+            const query = `?apikey=${apiKeys}&limit=${perPage}&page=${os}&price=gt_${_minPrice}^lt_${_maxPrice}&sales=gt_${_minSales}^lt_${_maxSales}&ratings=gt_${_minRatings}^lt_${_maxRatings}`
+            const response = await productsInstance.get(query)
             const data = await response.data
-
+            
+            console.log(data)
             setProducts(data.data)
             setLoading(false)
             setPageCount(data.lastPage)
@@ -36,7 +42,7 @@ function FilteredProducts({ perPage, minFilter, maxFilter, setFilter}) {
         return () => {
 
         }
-    }, [offset, perPage, minFilter, maxFilter])
+    }, [offset, perPage, _minPrice, _maxPrice, _minSales, _maxSales, _minRatings, _maxRatings])
 
     const setOpenModal = (value) => {
         setOpen(value)
@@ -77,14 +83,26 @@ function FilteredProducts({ perPage, minFilter, maxFilter, setFilter}) {
                 </div>
                 
                 <label className="block text-xs">Minimum price</label>
-                <input className="py-1 px-2" type="number" value={min} onChange={(e) => { setMin(e.target.value) }} name="min" min="0" max="1000" />
+                <input className="py-1 px-2" type="number" value={minPrice} onChange={(e) => { setMinPrice(e.target.value) }} name="min" min="0" max="1000" />
 
                 <label className="block text-xs">Maximum price</label>
-                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMax(e.target.value) }}  value={max} name="max" min="500" max="1500" />
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxPrice(e.target.value) }}  value={maxPrice} name="max" min="500" max="1500" />
+
+                <label className="block text-xs">Minimum sales</label>
+                <input className="py-1 px-2" type="number" value={minSales} onChange={(e) => { setMinSales(e.target.value) }} name="min" min="0" max="1000" />
                 
+                <label className="block text-xs">Maximum sales</label>
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxSales(e.target.value) }}  value={maxSales} name="max" min="500" max="1500" />
+
+                <label className="block text-xs">Minimum ratings</label>
+                <input className="py-1 px-2" type="number" value={minRatings} onChange={(e) => { setMinRatings(e.target.value) }} name="min" min="0" max="4" />
+                
+                <label className="block text-xs">Maximum ratings</label>
+                <input className="mb-2 py-1 px-2" type="number" onChange={(e) => { setMaxRatings(e.target.value) }}  value={maxRatings} name="max" min="0" max="5" />
+
                 <div className="mt-2">
-                    <button className="bg-green-300 text-green-800 font-medium mr-2 py-1 px-3 rounded" onClick={() => submitFilter(min, max)}>Submit filter</button>
-                    <button className="bg-red-300 text-red-800 font-medium py-1 px-3 rounded" onClick={() => removeFilter(min, max)}>Remove filter</button>
+                    <button className="bg-green-300 text-green-800 font-medium mr-2 py-1 px-3 rounded" onClick={() => submitFilter(minPrice, maxPrice, minSales, maxSales, minRatings, maxRatings)}>Submit filter</button>
+                    <button className="bg-red-300 text-red-800 font-medium py-1 px-3 rounded" onClick={() => removeFilter(minPrice, maxPrice, minSales, maxSales, minRatings, maxRatings)}>Remove filter</button>
                 </div>
 
             </Modal>
