@@ -11,13 +11,15 @@ This branch is dedicated for development! this where the changes are made and ex
     * ~~Footer~~
 2. Products Page
     1. Individual Products Component
-        * Display data contents
-        * Buy Button(does nothing)
+        * ~~Display data contents~~
+        * ~~Buy Button(does nothing)~~
+        * Related product
     * ~~Fetching the datas~~
     * ~~displaying the preview datas~~
     * ~~Pagination~~
     * change grid view to list view
-    * design pagination
+    * ~~design pagination~~
+    * ~~filtering~~
 3. Optimization
     * Lazy loading
     * Code splitting
