@@ -8,6 +8,7 @@ import Navbar from './components/global/Navbar';
 
 import Home from './pages/Home';
 import Products from './pages/Products'
+import Product from './pages/Product'
 import Footer from './components/global/Footer';
 
 function ProductsRoute({ children, ...rest}) {
@@ -27,8 +28,11 @@ function App() {
         <ProductsRoute exact path="/">
           <Home />
         </ProductsRoute>
-        <ProductsRoute path="/products">
+        <ProductsRoute exact path="/products">
           <Products />
+        </ProductsRoute>
+        <ProductsRoute path="/products/:id">
+          <Product />
         </ProductsRoute>
       </Switch>
 

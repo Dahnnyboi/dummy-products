@@ -8,7 +8,11 @@ import ReactStars from "react-rating-stars-component";
 function Product({data, type}) {
     return (
         <div className="z-0 h-full">
-            <Link to="/products">
+            <Link 
+                to={`/products/${data._id}`}
+                target="_blank"
+                rel='noopener noreferrer'
+                >
                 <div className={"c-card rounded bg-white " + (type === "top rated" ? "shadow-md hover:shadow-2xl" : "shadow-md hover:shadow-lg")}>
                     <LazyLoad height={150}>
                         <img className="w-full" src={data.product_image_md} alt={data.product_image_md} />
