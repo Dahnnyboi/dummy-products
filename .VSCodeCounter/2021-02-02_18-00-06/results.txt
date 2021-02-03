@@ -1,0 +1,81 @@
+Date : 2021-02-02 18:00:06
+Directory : c:\Users\dahn\Documents\dev\dummy_products\src
+Total : 43 files,  1121 codes, 4 comments, 240 blanks, all 1365 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         39 |      1,001 |          0 |        217 |      1,218 |
+| CSS        |          2 |         97 |          4 |         22 |        123 |
+| XML        |          2 |         23 |          0 |          1 |         24 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                 | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                    |         43 |      1,121 |          4 |        240 |      1,365 |
+| assets                                                                                               |          2 |         23 |          0 |          1 |         24 |
+| assets\images                                                                                        |          2 |         23 |          0 |          1 |         24 |
+| components                                                                                           |         29 |        877 |          0 |        186 |      1,063 |
+| components\global                                                                                    |          3 |         46 |          0 |         12 |         58 |
+| components\home                                                                                      |          7 |        243 |          0 |         39 |        282 |
+| components\home\container                                                                            |          4 |        143 |          0 |         18 |        161 |
+| components\product                                                                                   |          8 |        157 |          0 |         36 |        193 |
+| components\product\loading                                                                           |          3 |         28 |          0 |          6 |         34 |
+| components\products                                                                                  |         11 |        431 |          0 |         99 |        530 |
+| components\products\loading                                                                          |          4 |         69 |          0 |         13 |         82 |
+| pages                                                                                                |          5 |         64 |          0 |         18 |         82 |
+| utils                                                                                                |          2 |          5 |          0 |          3 |          8 |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                             | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\dahn\Documents\dev\dummy_products\src\App.css                                               | CSS        |          0 |          0 |          1 |          1 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\App.js                                                | JavaScript |         38 |          0 |          7 |         45 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\App.test.js                                           | JavaScript |          7 |          0 |          2 |          9 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\assets\images\dummy logo.svg                          | XML        |         22 |          0 |          1 |         23 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\assets\images\showcase.svg                            | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\global\Footer.js                           | JavaScript |         18 |          0 |          5 |         23 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\global\Navbar.js                           | JavaScript |         19 |          0 |          4 |         23 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\global\Shell.js                            | JavaScript |          9 |          0 |          3 |         12 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\Showcase.js                           | JavaScript |         20 |          0 |          3 |         23 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\TopRated.js                           | JavaScript |         40 |          0 |          9 |         49 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\TopSales.js                           | JavaScript |         40 |          0 |          9 |         49 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\container\Container.js                | JavaScript |         47 |          0 |          7 |         54 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\container\LoadingContainer.js         | JavaScript |         40 |          0 |          4 |         44 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\container\LoadingProduct.js           | JavaScript |         20 |          0 |          2 |         22 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\home\container\Product.js                  | JavaScript |         36 |          0 |          5 |         41 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\Product.js                         | JavaScript |         50 |          0 |          7 |         57 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\ProductContainer.js                | JavaScript |         33 |          0 |         10 |         43 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\RelatedContainer.js                | JavaScript |          8 |          0 |          4 |         12 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\RelatedProducts.js                 | JavaScript |          8 |          0 |          4 |         12 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\Review.js                          | JavaScript |         30 |          0 |          5 |         35 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\loading\LoadingProduct.js          | JavaScript |         28 |          0 |          4 |         32 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\loading\LoadingRelated.js          | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\product\loading\LoadingRelatedContainer.js | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\FilteredProducts.js               | JavaScript |        107 |          0 |         27 |        134 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\Product.js                        | JavaScript |         34 |          0 |          5 |         39 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\ProductsContainer.js              | JavaScript |         14 |          0 |          3 |         17 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\ProductsSection.js                | JavaScript |         42 |          0 |          9 |         51 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\RandomContainer.js                | JavaScript |         37 |          0 |         10 |         47 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\RandomProduct.js                  | JavaScript |         29 |          0 |          5 |         34 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\UnfilteredProducts.js             | JavaScript |         99 |          0 |         27 |        126 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\loading\LoadingContainer.js       | JavaScript |         15 |          0 |          3 |         18 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\loading\LoadingProduct.js         | JavaScript |         22 |          0 |          3 |         25 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\loading\LoadingRandom.js          | JavaScript |         17 |          0 |          3 |         20 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\components\products\loading\LoadingRandomContainer.js | JavaScript |         15 |          0 |          4 |         19 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\index.css                                             | CSS        |         97 |          4 |         21 |        122 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\index.js                                              | JavaScript |         10 |          0 |          1 |         11 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\pages\Bought.js                                       | JavaScript |          8 |          0 |          4 |         12 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\pages\Home.js                                         | JavaScript |         14 |          0 |          3 |         17 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\pages\NotFound.js                                     | JavaScript |          8 |          0 |          4 |         12 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\pages\Product.js                                      | JavaScript |         19 |          0 |          4 |         23 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\pages\Products.js                                     | JavaScript |         15 |          0 |          3 |         18 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\utils\apis.js                                         | JavaScript |          4 |          0 |          3 |          7 |
+| c:\Users\dahn\Documents\dev\dummy_products\src\utils\keys.js                                         | JavaScript |          1 |          0 |          0 |          1 |
+| Total                                                                                                |            |      1,121 |          4 |        240 |      1,365 |
++------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

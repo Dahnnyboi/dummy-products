@@ -1,7 +1,9 @@
 import React from 'react'
+import loadable from '@loadable/component'
 import Shell from '../components/global/Shell'
-import ProductsSection from '../components/products/ProductsSection'
-import RandomContainer from '../components/products/RandomContainer'
+
+const ProductsSection = loadable(() => import( '../components/products/ProductsSection'))
+const RandomContainer = loadable(() => import('../components/products/RandomContainer'))
 
 function Products() {
     return (

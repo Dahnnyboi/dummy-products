@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom';
 import showcase from '../../assets/images/showcase.svg'
 
@@ -6,7 +7,9 @@ function Showcase() {
     return (
         <div className="flex flex-col lg:flex-row items-center w-11/12 pt-12 mx-auto md:w-10/12 2xl:w-8/12">
             <div className="m-8 lg:w-3/6">
-                <img src={showcase} alt="showcase"/>
+                <LazyLoad height={600}>
+                    <img src={showcase} alt="showcase"/>
+                </LazyLoad>
             </div>
             <div className="lg:w-3/6 font-custom text-center lg:text-left">
                 <h1 className="text-5xl font-extrabold  text-green-800">Dummy Products</h1>

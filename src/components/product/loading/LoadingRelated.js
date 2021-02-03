@@ -1,0 +1,23 @@
+import React from 'react'
+
+function LoadingRelated() {
+    return (
+        <div className="width-container">
+            <div className="animate-pulse m-4 rounded shadow-lg">
+            <div className="w-full h-32 md:h-64 lg:h-72 bg-green-500 rounded"></div>
+            <div className="p-3 md:p-4">
+                    <div className="w-1/4 h-4 bg-green-500 rounded my-1"></div>
+                    <div className="w-full h-4 bg-green-500 my-1 rounded"></div>
+                    <div className="w-1/2 h-4 bg-green-500 my-1 rounded"></div>
+                </div>
+                <div className="p-3 md:p-4 border-t">
+                    <div className="w-1/2 h-4 bg-green-500 my-1 rounded"></div>
+                    <div className="w-1/4 h-4 bg-green-500 my-1 rounded"></div>
+                </div>
+            </div>
+            
+        </div>
+    )
+}
+
+export default LoadingRelated

@@ -2,25 +2,9 @@
 
 This branch is dedicated for development! this where the changes are made and examined before the deployment to actual production of website!
 
-## Things to do
-1. Front Page
-    * ~~Navbar~~
-    * ~~Showcase~~
-    * ~~Top Rated products~~
-    * ~~Top Sales products~~
-    * ~~Footer~~
-2. Products Page
-    1. Individual Products Component
-        * ~~Display data contents~~
-        * ~~Buy Button(does nothing)~~
-        * Related product
-    * ~~Fetching the datas~~
-    * ~~displaying the preview datas~~
-    * ~~Pagination~~
-    * change grid view to list view
-    * ~~design pagination~~
-    * ~~filtering~~
-3. Optimization
-    * Lazy loading
-    * Code splitting
-4. Animations
+## Finished v1
+Things to update
+1. Migrate to redux to have global state
+2. Make central product components that can be reusable
+3. Searching component that is dependent to redux
+4. Animations and improved User Experience

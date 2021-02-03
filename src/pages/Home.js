@@ -1,7 +1,9 @@
 import React from 'react'
-import Showcase from '../components/home/Showcase'
-import TopSales from '../components/home/TopSales'
-import TopRated from '../components/home/TopRated'
+import loadable from '@loadable/component'
+
+const Showcase = loadable(() => import('../components/home/Showcase')) 
+const TopSales = loadable(() => import('../components/home/TopSales')) 
+const TopRated = loadable(() => import('../components/home/TopRated'))
 
 function Home() {
     return (

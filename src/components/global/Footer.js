@@ -3,7 +3,7 @@ import { AiFillGithub } from 'react-icons/ai'
 
 function Footer() {
     return (
-        <footer className="bg-green-800 text-white w-full mt-8">
+        <footer className="footer bg-green-800 text-white w-full mt-12">
             <div className="w-11/12 mx-auto md:w-10/12 2xl:w-8/12 flex flex-col item-center py-6 md:flex-row">
                 <div className="flex-grow">
                     <p className="text-md font-medium mb-2">© 2020 Dahn Registrado</p>

@@ -1,5 +1,6 @@
 import React, { useState }from 'react'
 import LazyLoad from 'react-lazyload'
+import { Link } from 'react-router-dom'
 
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import ReactStars from "react-rating-stars-component";
@@ -29,7 +30,11 @@ function Product({ data }) {
                         emptyIcon={<AiOutlineStar color="#9CA3A"/>}
                     /><span>{data.product_sales} sales</span>
                 </div>
-                <button className="bg-green-300 text-green-800 font-medium py-1 px-3 rounded">Buy now!</button>
+                <Link
+                    to={`/bought`} 
+                    className="bg-green-300 text-green-800 font-medium py-1 px-3 rounded">
+                        Buy now!
+                </Link>
 
                 <div className="border-t-2 border-gray-200 mt-2">
                     <h1 className="text-md font-medium mt-4">Reviews</h1>

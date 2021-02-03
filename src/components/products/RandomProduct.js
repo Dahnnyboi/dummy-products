@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 
 function RandomProduct({ data }) {
     return (
-        <Link>
+        <Link
+            to={`/products/${data._id}`}
+            target="_blank"
+            rel='noopener noreferrer'
+        >
             <div className="w-full h-24 grid grid-cols-3 grid-rows-2 gap-2 m-4 2xl:m-6">
                 <div className="col-span-1 row-span-2">
                     <LazyLoad>
