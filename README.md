@@ -6,15 +6,18 @@ Consuming of [Dummy products API](https://dummyproducts-api.herokuapp.com/) usin
 ![Dummy Image](./markdown/dummy.png "Dummy products API")
 
 ## Features
-    * Viewing top sales & top rated products
-    * Viewing pagination of products
-    * Filtering of products
-    * Viewing individual product and their reviews
+* Viewing top sales & top rated products
+* Viewing pagination of products
+* Filtering of products
+* Viewing individual product and their reviews
+
+## Live Demo
+You can visit the site at [https://dummy-products.netlify.app/](https://dummy-products.netlify.app/)
 
 ## Installation
 Requirements 
-    [NodeJS](https://nodejs.org/en/)
-    [Git](https://git-scm.com/downloads)
+* [NodeJS](https://nodejs.org/en/)
+* [Git](https://git-scm.com/downloads)
 
 Running it locally:
 Get a API key from [Dummy products API](https://dummyproducts-api.herokuapp.com/) and create a .env file copy the format in .env.example given
