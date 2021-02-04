@@ -13,7 +13,6 @@ function TopSales() {
             setLoading(true)
             const response = await productsInstance.get(`topsales?apikey=${apiKeys}`)
             const data = await response.data
-            console.log(data)
 
             setTopSales([...data.data])
             setLoading(false)

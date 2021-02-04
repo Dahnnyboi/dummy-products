@@ -15,7 +15,6 @@ function RelatedContainer({ id }) {
             const response = await productsInstance.get(`/${id}?apikey=${apiKeys}&similarities=true`)
             const data = response.data
 
-            console.log(data.data.product_similar)
             setRelated(data.data.product_similar)
             setLoading(false)
         } 

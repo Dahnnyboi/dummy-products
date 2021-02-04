@@ -18,7 +18,6 @@ function ProductContainer({ id }) {
                 const response = await productsInstance.get(`/${id}?apikey=${apiKeys}`)
                 const data = await response.data
 
-                console.log(data.data)
                 setProduct(data.data)
                 setLoading(false)
             } catch(e) {
