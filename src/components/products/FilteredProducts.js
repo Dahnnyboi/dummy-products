@@ -31,7 +31,6 @@ function FilteredProducts({ perPage, _minPrice, _maxPrice, _minSales, _maxSales,
             const response = await productsInstance.get(query)
             const data = await response.data
             
-            console.log(data)
             setProducts(data.data)
             setLoading(false)
             setPageCount(data.lastPage)

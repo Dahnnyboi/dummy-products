@@ -59,9 +59,9 @@
 }
 
 /* 6 product */
-@media(min-width: 1560px){
+@media(min-width: 1920px){
     .width-container{
-        width: 14%;
+        width: 21%;
     }
 }
 
